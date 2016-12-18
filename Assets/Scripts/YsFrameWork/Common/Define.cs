@@ -122,6 +122,8 @@ public sealed class Define
 	/// </summary>
 	public enum UIType
 	{
+		StartPanel,
+
         UserPanel,
 
 		MainPanel,

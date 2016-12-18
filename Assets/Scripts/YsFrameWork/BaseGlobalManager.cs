@@ -9,11 +9,12 @@ public class BaseGlobalManager : AbsUnityManager <BaseGlobalManager>
 	{
 		InitManager ();
 		InitModule ();
+		InitScenes ();
 	}
 
 	protected override void OnStart ()
 	{
-		
+		SceneManagerEX.Instance.ChangeSceneDirect (Define.SceneType.StartScene);	
 	}
 
 
@@ -36,6 +37,16 @@ public class BaseGlobalManager : AbsUnityManager <BaseGlobalManager>
 	{
 //		ModuleManager.Instance.Register<> ();
         ModuleManager.Instance.Register<UserModule>();
+	}
+
+	protected virtual void InitScenes()
+	{
+		SceneManagerEX.Instance.RegisterScene (Define.SceneType.StartScene);
+	}
+
+	protected virtual void InitUIPanel()
+	{
+		
 	}
 	
 }

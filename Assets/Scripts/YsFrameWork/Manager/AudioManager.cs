@@ -81,7 +81,7 @@ namespace YSFramework
 
         public void PlayAudioByScene(Define.SceneType sceneType)
         {
-            unityAudioManager.PlayAudioByScene(sceneType);
+			if(unityAudioManager != null) unityAudioManager.PlayAudioByScene(sceneType);
         }
 
         public void PlayByName(string audioName)

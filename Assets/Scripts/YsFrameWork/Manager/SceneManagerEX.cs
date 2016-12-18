@@ -209,7 +209,7 @@ public class SceneManagerEX : BaseManager<SceneManagerEX>
     /// <param name="para"></param>
     public void RegisterScene(AbsScene scene)
     {
-        
+		throw new Exception ("尚未實現");
     }
 
     /// <summary>
