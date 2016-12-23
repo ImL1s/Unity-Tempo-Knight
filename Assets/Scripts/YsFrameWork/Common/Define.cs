@@ -126,7 +126,9 @@ public sealed class Define
 
         UserPanel,
 
-		MainPanel,
+        GamePanel,
+
+        MainPanel,
 
 		LoadingPanel,
 
@@ -193,15 +195,18 @@ public sealed class Define
 		/// </summary>
 		StartScene,
 
-		CommonPlayScene,
+        GameScene,
+
+        CommonPlayScene,
 
 		CommonTimerPlayScene,
 
 		/// <summary>
 		/// 衣櫃場景
 		/// </summary>
-		ChestScene
-	}
+		ChestScene,
+        
+    }
 
 	/// <summary>
 	/// 屬性類型.

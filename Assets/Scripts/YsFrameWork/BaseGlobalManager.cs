@@ -42,7 +42,8 @@ public class BaseGlobalManager : AbsUnityManager <BaseGlobalManager>
 	protected virtual void InitScenes()
 	{
 		SceneManagerEX.Instance.RegisterScene (Define.SceneType.StartScene);
-	}
+        SceneManagerEX.Instance.RegisterScene (Define.SceneType.GameScene);
+    }
 
 	protected virtual void InitUIPanel()
 	{

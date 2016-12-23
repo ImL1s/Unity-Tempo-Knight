@@ -16,16 +16,21 @@ public class StartPanel : AbsUIPanel
 
 	private Button playBtn;
 
+    private Button optionBtn;
+
 
 	protected override void OnAwake ()
 	{
 		playBtn = transform.FindAndGet<Button> ("PlayBtn");
-	}
+        optionBtn = transform.FindAndGet<Button>("OptionBtn");
+        
+    }
 
 	protected override void OnStart ()
 	{
 		playBtn.AddPointDownListener (OnPlayBtnClick);
-	}
+        optionBtn.AddPointDownListener(OnOptionBtnClick);
+    }
 
 	protected override void OnUpdate ()
 	{
@@ -35,6 +40,12 @@ public class StartPanel : AbsUIPanel
 	private void OnPlayBtnClick(GameObject listener, object arg, object[] handleParams)
 	{
 		Logger.Debug ("enter game");
-	}
+        SceneManagerEX.Instance.ChangeSceneDirect(Define.SceneType.GameScene);
+    }
+
+    private void OnOptionBtnClick(GameObject listener, object arg, object[] handleParams)
+    {
+        Logger.Debug("open option");
+    }
 
 }
